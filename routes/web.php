@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Dashboard\postController;
+use App\Http\Controllers\Dashboard\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,6 +32,10 @@ Route::resource('post', postController::class);
 // Route::post('post', [postController::class,'store']);
 // Route::put('post/{post}', [postController::class,'update']);
 // Route::delete('post/{post}', [postController::class,'delete']);
+
+// ruta para administracion de las categorias
+Route::resource('category', CategoryController::class);
+
 
 
 

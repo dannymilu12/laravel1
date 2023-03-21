@@ -7,7 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    use HasFactory;
+    
+    protected $fillable = 
+    [
+        'title',
+        'slug'
+    ];
+
+
     public function posts()
     {
         return $this->hasMany(Post::class); // retornar la relacion.
